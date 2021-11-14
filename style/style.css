@@ -6,8 +6,8 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 0.46fr;
-  grid-template-rows: 0.2fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 132px 1fr;
   gap: 36px 50px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -97,14 +97,75 @@ body {
   text-decoration: underline;
 }
 
+.main { 
+  grid-area: main; 
+  margin-left: 25px;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.voting {
+  margin-top: 28px;
+}
+
+.voting h1 {
+  font-weight: bold;
+  font-size: 64px;
+  margin: 0;
+}
+
+.voting .cards {
+  margin-top: 33px;
+
+  display: flex;
+}
+
+.voting .cards .card-item {
+  width: 384px;
+  background: #FFFFFF;
+  border: 2px solid #DBD8D8;
+  margin: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.voting .cards .card-item:first-child {
+  margin-left: 0;
+}
+
+.voting .cards .card-item:last-child {
+  margin-right: 0;
+}
+
+.voting .cards .card-item .card-item-text {
+  font-size: 14px;
+  text-align: center;
+  margin: 26px 18px;
+}
+
+.voting .cards .card-item button {
+  padding: 20px 9px;
+  background-color: #fff;
+  border: 1px solid #FF8300;
+  color: #FF8300;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 23px 97px 32px 97px;
+}
+
+.voting .cards .card-item:hover button {
+  background-color: #FF8300;
+  color: #fff;
+}
+
 .news { 
   grid-area: news; 
   background-color: darkred;
   margin-right: 25px;
-}
-
-.main { 
-  grid-area: main; 
-  background-color: lightgray;
-  margin-left: 25px;
 }
